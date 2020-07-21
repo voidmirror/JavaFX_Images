@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="450.0" prefWidth="600.0">
+         <children>
+            <ImageView id="view1" fx:id="view1" fitHeight="150.0" fitWidth="200.0" layoutX="100.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
+            <Button id="btnChange" fx:id="btnChange" layoutX="174.0" layoutY="29.0" mnemonicParsing="false" onAction="#changeImage" text="Change" />
+            <Button id="btnMove" fx:id="btnMove" layoutX="248.0" layoutY="29.0" mnemonicParsing="false" onAction="#move" text="Move" />
+            <Button id="btnChoose" fx:id="btnChoose" layoutX="100.0" layoutY="29.0" mnemonicParsing="false" onAction="#chooseImage" text="Choose" />
+            <ChoiceBox id="choiceBox1" fx:id="choiceBox1" layoutX="381.0" layoutY="75.0" onAction="#changeImageView" onMouseClicked="#refreshChoiceBoxes" prefWidth="150.0" />
+            <ChoiceBox id="choiceBox2" fx:id="choiceBox2" layoutX="381.0" layoutY="116.0" onMouseClicked="#refreshChoiceBoxes" prefWidth="150.0" />
+            <ImageView id="view1" fx:id="view11" fitHeight="150.0" fitWidth="200.0" layoutX="100.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true" />
+            <Button id="btnCompare" fx:id="btnCompare" onAction="#comparison" layoutX="316.0" layoutY="29.0" mnemonicParsing="false" text="Compare" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
