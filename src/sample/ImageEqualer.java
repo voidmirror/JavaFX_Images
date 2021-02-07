@@ -48,7 +48,7 @@ public class ImageEqualer {
 //        view.setImage(writableImage);
 
 
-        System.out.println(pathTrimmer(image1.getUrl()));
+        System.out.println();
         another(image1);
         another(image2);
 
@@ -61,7 +61,7 @@ public class ImageEqualer {
 
         try {
             ArrayList<Integer> arrayList = new ArrayList<>();
-            File file = new File(pathFormer(image.getUrl()));
+            File file = new File(pathFormer(image.impl_getUrl()));
             BufferedImage source = ImageIO.read(file);
             BufferedImage result = new BufferedImage(source.getWidth(), source.getHeight(), source.getType());
 
@@ -83,7 +83,7 @@ public class ImageEqualer {
                 }
             }
 
-            File output = new File(pathFormer(image.getUrl()));
+            File output = new File(pathFormer(image.impl_getUrl()));
             ImageIO.write(result, "jpg", output);
 
         } catch (IOException e) {
@@ -175,7 +175,7 @@ public class ImageEqualer {
     public void another(Image image) throws IOException {
 //        System.out.println(pathTrimmer(image.getUrl()));
         ImageResizer imageResizer = new ImageResizer();
-        imageResizer.resize(pathTrimmer(image.getUrl()), pathFormer(image.getUrl()), 64, 64);
+        imageResizer.resize(pathTrimmer(image.impl_getUrl()), pathFormer(image.impl_getUrl()), 64, 64);
 
     }
 
